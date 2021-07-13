@@ -1,0 +1,77 @@
+---
+title: Gatsby and mdx tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2021-07-09
+author: me
+category: gatsby
+readTime: 34
+---
+
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../../components/Complete'
+
+## mdx file
+
+**Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam iusto nostrum delectus architecto eveniet excepturi culpa impedit eum corporis.** Molestiae doloribus temporibus asperiores delectus, repudiandae, tempora ab magni numquam laudantium facilis nulla obcaecati quisquam fugiat. _Possimus alias recusandae adipisci rerum ipsum accusantium soluta optio harum, quo dignissimos, quis architecto eum amet laboriosam numquam culpa quibusdam facilis aperiam quidem ipsa! Odio modi sint ullam dolores, cumque suscipit vero tenetur enim!_
+
+<div className="code">
+
+```js
+const firstName = 'Yena'
+const lastName = 'Choi'
+```
+
+</div>
+
+<div className="nice-text">
+
+<h3>nice text</h3>
+
+<FiInfo className="nice-text-icon"></FiInfo>
+
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi vitae nostrum laboriosam consequuntur, non excepturi atque. Natus, iste dolor. Consequatur libero saepe quaerat, maxime deserunt tempora explicabo corrupti repellat quam facilis, est molestiae ab similique eligendi recusandae necessitatibus eveniet reprehenderit mollitia quis veritatis, distinctio exercitationem deleniti? Laudantium fugiat tempore doloribus!
+
+</div>
+
+<h2 className="margin-mdx-top"> React Components</h2>
+
+<div className="set-middle">
+
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+</div>
+
+<LikeButton />
+
+![nice image](./images/gatsby-1.png)
+
+<Link to="/posts" className="btn center-btn">
+  To all posts
+</Link>
