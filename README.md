@@ -1,7 +1,7 @@
 # LearningProjects
 
 
-Webapps ranging from complex to simple. 
+Webapps from udemy learning
 Mainly for practice and learning.
 
 Includes:
